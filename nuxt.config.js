@@ -24,6 +24,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/scss/index.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -44,6 +45,11 @@ export default {
     // https://www.npmjs.com/package/@nuxtjs/style-resources
     '@nuxtjs/style-resources'
   ],
+
+  // Style resources configuration: https://www.npmjs.com/package/@nuxtjs/style-resources
+  styleResources: {
+    scss: '@/assets/scss/variables/_responsive.scss'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
