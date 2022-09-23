@@ -12,7 +12,7 @@
       </BaseIcon>
     </BaseButton>
     <transition name="navbar-menu">
-      <TheNavbarMenu v-show="isOpen" @close="toggleIsOpen" />
+      <TheMobileNavbarMenu v-show="isOpen" @close="toggleIsOpen" />
     </transition>
   </nav>
 </template>
