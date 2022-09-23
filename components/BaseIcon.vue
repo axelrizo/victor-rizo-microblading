@@ -1,11 +1,11 @@
 <template>
-  <div class="base-icon">
+  <div class="icon">
     <slot />
   </div>
 </template>
 
 <style lang="scss" scoped>
-.base-icon{
+.icon{
   height: 20px;
   width: 20px;
   display: flex;
