@@ -1,7 +1,7 @@
 <template>
-  <div class="logo">
+  <NuxtLink to="/" class="logo">
     <BaseImage :src="require('~/assets/images/logo.jpg')" alt="microblading cdmx logo" />
-  </div>
+  </NuxtLink>
 </template>
 
 <style lang="scss" scoped>
