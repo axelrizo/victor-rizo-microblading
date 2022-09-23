@@ -27,12 +27,12 @@ export default {
 
       if (this.socialMedia === 'instagram') {
         returnedObject.component = 'IconInstagram'
-        returnedObject.link = 'www.instagram.com'
+        returnedObject.link = 'https://www.instagram.com/'
       }
 
       if (this.socialMedia === 'whatsApp') {
         returnedObject.component = 'IconWhatsApp'
-        returnedObject.link = 'www.whatsapp.com'
+        returnedObject.link = 'https://www.whatsapp.com/'
       }
       return returnedObject
     }
