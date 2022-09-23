@@ -7,6 +7,6 @@
 <style lang="scss" scoped>
 .base-logo{
   height: 40px;
-  width: auto;
+  width: 40px;
 }
 </style>
