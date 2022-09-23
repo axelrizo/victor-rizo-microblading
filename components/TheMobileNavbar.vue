@@ -1,13 +1,19 @@
 <template>
   <nav class="navbar">
     <BaseButton @click="toggleIsOpen">
-      <BaseIcon><IconMenu /></BaseIcon>
+      <BaseIcon class="background-black-text-white">
+        <IconMenu />
+      </BaseIcon>
     </BaseButton>
     <BaseLogo />
     <BaseButton>
-      <BaseIcon><IconWhatsApp /></BaseIcon>
+      <BaseIcon class="background-black-text-white">
+        <IconWhatsApp />
+      </BaseIcon>
     </BaseButton>
-    <TheNavbarMenu v-show="isOpen" @close="toggleIsOpen" />
+    <transition name="navbar-menu">
+      <TheNavbarMenu v-show="isOpen" @close="toggleIsOpen" />
+    </transition>
   </nav>
 </template>
 
@@ -31,6 +37,11 @@ export default {
 .navbar{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: var(--background-black);
 }
+
+.navbar-menu-enter-active, .navbar-menu-leave-active { transition: opacity .5s; }
+.navbar-menu-enter, .navbar-menu-leave-active { opacity: 0; }
 </style>

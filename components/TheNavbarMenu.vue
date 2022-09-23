@@ -1,8 +1,8 @@
 <template>
   <nav class="menu">
     <div class="menu__close">
-      <BaseButton class="background-transparent" @click="$emit('close')">
-        <BaseIcon class="background-black-text-white">
+      <BaseButton @click="$emit('close')">
+        <BaseIcon class="background-black-text-white size-35">
           <IconClose />
         </BaseIcon>
       </BaseButton>
@@ -56,13 +56,13 @@ export default {
   position: fixed;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 10px 40px;
   background-color: var(--background-black);
 
   &__close {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
   }
 
   &__logo {

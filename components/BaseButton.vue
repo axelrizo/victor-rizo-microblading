@@ -16,9 +16,10 @@ export default {
 .button{
   padding: 5px;
   border: none;
+  background-color: var(--transparent);
 
-  &.background-transparent{
-    background-color: var(--background-transparent);
+  &.background-black{
+    background-color: var(--background-black);
   }
 }
 </style>
