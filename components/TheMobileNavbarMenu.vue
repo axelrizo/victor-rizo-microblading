@@ -16,7 +16,7 @@
       :to="link.to"
       tag="nuxt-link"
     >
-      <BaseText class="background-black-text-white italiana size-20">
+      <BaseText class="background-black-text-white italiana size-24">
         {{ link.text }}
       </BaseText>
     </BaseButton>

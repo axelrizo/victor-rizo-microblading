@@ -27,8 +27,8 @@ export default {
   }
 
   // sizes
-  &.size-20 {
-    font-size: 28px
+  &.size-24 {
+    font-size: 24px
   }
 }
 </style>
