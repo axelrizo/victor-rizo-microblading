@@ -1,11 +1,12 @@
 <template>
   <div>
-    <h1>Hola</h1>
+    <TheNavbar />
+    <Nuxt />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'DefaultLayout'
 }
 </script>
