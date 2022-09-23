@@ -14,12 +14,21 @@ export default {
 
 <style lang="scss" scoped>
 .text{
+  font-family: 'Roboto', sans-serif;
+
+  // color
+  &.background-black-text-white{
+    color: var(--background-black_text-white)
+  }
+
+  // fonts
   &.italiana{
     font-family: 'Italiana', serif;
   }
 
-  &.background-black-color-white{
-    color: var(--background-black_text-white)
+  // sizes
+  &.size-20 {
+    font-size: 28px
   }
 }
 </style>
