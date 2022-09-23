@@ -1,36 +1,50 @@
 <template>
   <nav class="menu">
     <div class="menu__close">
-      <BaseButton @click="$emit('close')">
-        <BaseIcon><IconClose /></BaseIcon>
+      <BaseButton class="background-transparent" @click="$emit('close')">
+        <BaseIcon class="background-black-text-white">
+          <IconClose />
+        </BaseIcon>
       </BaseButton>
     </div>
-    <BaseButton href="#">
-      Inicio
+    <div class="menu__logo">
+      <BaseLogo />
+    </div>
+    <BaseButton
+      v-for="(link, i) in links"
+      :key="i"
+      :to="link.to"
+      tag="nuxt-link"
+    >
+      <BaseText class="background-black-text-white italiana size-20">
+        {{ link.text }}
+      </BaseText>
     </BaseButton>
-    <BaseButton href="#">
-      Galería
-    </BaseButton>
-    <BaseButton href="#">
-      Contacto
-    </BaseButton>
-    <BaseButton href="#">
-      Equipo
-    </BaseButton>
-    <BaseButton href="#">
-      Servicios
-    </BaseButton>
-    <BaseButton href="#">
-      Cursos
-    </BaseButton>
-    <BaseButton href="#">
-      Ubicación
-    </BaseButton>
-    <BaseButton href="#">
-      Blog
-    </BaseButton>
+    <div class="menu__social-media">
+      <SocialMediaLink />
+      <SocialMediaLink social-media="instagram" />
+    </div>
   </nav>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      links: [
+        { text: 'Inicio', to: '/' },
+        { text: 'Galería', to: '/gallery' },
+        { text: 'Contacto', to: '/contact' },
+        { text: 'Equipo', to: '/team' },
+        { text: 'Servicios', to: '/services' },
+        { text: 'Cursos', to: '/courses' },
+        { text: 'Ubicación', to: '/location' },
+        { text: 'Blog', to: '/blog' }
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .menu {
@@ -41,13 +55,24 @@
   display: flex;
   position: fixed;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding: 40px;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: var(--background-black);
 
   &__close {
     position: absolute;
     top: 15px;
     right: 15px;
+  }
+
+  &__logo {
+    margin: 0 auto;
+  }
+
+  &__social-media{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
 }
 </style>

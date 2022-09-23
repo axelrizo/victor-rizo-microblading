@@ -5,11 +5,20 @@
 </template>
 
 <style lang="scss" scoped>
-.icon{
-  height: 20px;
-  width: 20px;
+.icon {
+  font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  // color
+  &.background-black-text-white {
+    color: var(--background-black_text-white);
+  }
+
+  // size
+  &.size-35 {
+    font-size: 35px;
+  }
 }
 </style>

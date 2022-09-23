@@ -6,6 +6,7 @@
 
 <style lang="scss" scoped>
 .logo{
+  display: block;
   height: 40px;
   width: 40px;
 }

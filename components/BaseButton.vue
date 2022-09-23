@@ -7,10 +7,18 @@
 <script>
 export default {
   props: {
-    tag: {
-      type: String,
-      default: 'button'
-    }
+    tag: { type: String, default: 'button' }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.button{
+  padding: 5px;
+  border: none;
+
+  &.background-transparent{
+    background-color: var(--background-transparent);
+  }
+}
+</style>
