@@ -20,5 +20,9 @@
   &.size-35 {
     font-size: 35px;
   }
+
+  &.size-24 {
+    font-size: 24px;
+  }
 }
 </style>

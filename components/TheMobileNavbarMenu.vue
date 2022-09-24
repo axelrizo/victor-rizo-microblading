@@ -56,7 +56,7 @@ export default {
   position: fixed;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 40px;
+  padding: 10px 40px 20px;
   background-color: var(--background-black);
 
   &__close {

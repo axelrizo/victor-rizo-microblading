@@ -6,11 +6,13 @@
       </BaseIcon>
     </BaseButton>
     <BaseLogo />
-    <BaseButton>
-      <BaseIcon class="background-black-text-white">
-        <IconWhatsApp />
-      </BaseIcon>
-    </BaseButton>
+    <SocialMediaLink>
+      <template #icon>
+        <BaseIcon class="background-black-text-white size-24">
+          <IconWhatsApp />
+        </BaseIcon>
+      </template>
+    </SocialMediaLink>
     <transition name="navbar-menu">
       <TheMobileNavbarMenu v-show="isOpen" @close="toggleIsOpen" />
     </transition>
@@ -18,10 +20,12 @@
 </template>
 
 <script>
+import IconWhatsApp from './IconWhatsApp.vue'
 export default {
+  components: { IconWhatsApp },
   data () {
     return {
-      isOpen: true
+      isOpen: false
     }
   },
 

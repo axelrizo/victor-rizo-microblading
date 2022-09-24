@@ -13,12 +13,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.button{
+.button {
   padding: 5px;
   border: none;
   background-color: var(--transparent);
 
-  &.background-black{
+  &.background-black {
     background-color: var(--background-black);
   }
 }

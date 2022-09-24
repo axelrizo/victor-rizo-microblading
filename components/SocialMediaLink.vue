@@ -5,9 +5,11 @@
     target="_blank"
     class="background-transparent"
   >
-    <BaseIcon class="background-black-text-white size-35">
-      <component :is="computedData.component" />
-    </BaseIcon>
+    <slot name="icon">
+      <BaseIcon class="background-black-text-white size-35">
+        <component :is="computedData.component" />
+      </BaseIcon>
+    </slot>
   </BaseButton>
 </template>
 
@@ -23,17 +25,16 @@ export default {
 
   computed: {
     computedData () {
-      const returnedObject = {}
+      const returnedObject = {
+        component: 'IconWhatsApp',
+        link: 'https://www.whatsapp.com/'
+      }
 
       if (this.socialMedia === 'instagram') {
         returnedObject.component = 'IconInstagram'
         returnedObject.link = 'https://www.instagram.com/'
       }
 
-      if (this.socialMedia === 'whatsApp') {
-        returnedObject.component = 'IconWhatsApp'
-        returnedObject.link = 'https://www.whatsapp.com/'
-      }
       return returnedObject
     }
   }
