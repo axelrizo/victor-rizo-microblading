@@ -18,17 +18,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      // italiana font
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:wght@300&display=swap' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/scss/index.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -40,30 +35,15 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
-    // https://www.npmjs.com/package/@nuxtjs/stylelint-module
-    '@nuxtjs/stylelint-module'
+    // https://go.nuxtjs.dev/typescript
+    '@nuxt/typescript-build',
+    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/tailwindcss'
   ],
-
-  stylelint: {
-    fix: true
-  },
-
-  eslint: {
-    fix: true
-  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://www.npmjs.com/package/@nuxtjs/style-resources
-    '@nuxtjs/style-resources'
   ],
-
-  // Style resources configuration: https://www.npmjs.com/package/@nuxtjs/style-resources
-  styleResources: {
-    scss: '@/assets/scss/variables/_responsive.scss'
-  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
