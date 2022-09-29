@@ -3,7 +3,7 @@
     class="fixed flex items-center justify-center w-full py-2 bg-gradient-to-b from-black to-transparent hover:bg-black"
     :class="{ 'bg-black': changeHeaderActiveHeader, 'bg-gradient-to-br': !changeHeaderActiveHeader }"
   >
-    <nav class="flex py-2">
+    <nav class="flex py-2" :class="{ 'hidden': changeHeaderActiveHeader}">
       <div class="flex-1" />
       <div class="flex justify-center flex-1">
         <img class="h-7" src="~/assets/images/logo.jpg" alt="">
@@ -22,6 +22,10 @@
       >
         {{ text.toUpperCase() }}
       </NuxtLink>
+      <div class="flex items-center justify-center gap-3 px-2" :class="{ 'hidden': !changeHeaderActiveHeader}">
+        <IconInstagram class="text-xl text-gray-100" />
+        <IconWhatsapp class="text-xl text-gray-100" />
+      </div>
     </nav>
   </header>
 </template>
