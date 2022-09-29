@@ -1,7 +1,7 @@
 <template>
   <header
     class="fixed z-40 flex items-center justify-center w-full h-10 bg-gradient-to-b from-black to-transparent"
-    :class="{ 'bg-black': changeHeaderActiveHeader, 'bg-gradient-to-br': !changeHeaderActiveHeader }"
+    :class="{ 'bg-black': mixinChangeHeaderActiveHeader, 'bg-gradient-to-br': !mixinChangeHeaderActiveHeader }"
   >
     <button class="flex items-center justify-center flex-1 w-full h-full" @click="isMenuOpen = true">
       <IconMenu class="text-xl text-gray-100" />
@@ -19,10 +19,10 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import changeHeader from '@/mixins/changeHeader'
+import mixinChangeHeader from '~/mixins/mixinChangeHeader'
 
 export default Vue.extend({
-  mixins: [changeHeader],
+  mixins: [mixinChangeHeader],
 
   data () {
     const isMenuOpen = false

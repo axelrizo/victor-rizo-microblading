@@ -25,7 +25,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import mixinLinks from '~/mixins/mixinLinks'
+import mixinLinks from '@/mixins/mixinLinks'
 
 export default Vue.extend({
   mixins: [mixinLinks]

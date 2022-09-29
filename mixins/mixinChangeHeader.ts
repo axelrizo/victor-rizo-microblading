@@ -4,9 +4,9 @@ const HEADER_BACKGROUND_APPEAR = 5
 
 export default Vue.extend({
   data () {
-    const changeHeaderActiveHeader = false
+    const mixinChangeHeaderActiveHeader = false
     return {
-      changeHeaderActiveHeader
+      mixinChangeHeaderActiveHeader
     }
   },
 
@@ -16,9 +16,9 @@ export default Vue.extend({
         document.body.scrollTop > HEADER_BACKGROUND_APPEAR ||
         document.documentElement.scrollTop > HEADER_BACKGROUND_APPEAR
       ) {
-        this.changeHeaderActiveHeader = true
+        this.mixinChangeHeaderActiveHeader = true
       } else {
-        this.changeHeaderActiveHeader = false
+        this.mixinChangeHeaderActiveHeader = false
       }
     })
   }
