@@ -1,6 +1,6 @@
 <template>
-  <header
-    class="fixed flex items-center justify-center w-full py-2 bg-gradient-to-b from-black to-transparent hover:bg-black"
+  <nav
+    class="fixed z-40 flex items-center justify-center w-full py-2 bg-gradient-to-b from-black to-transparent hover:bg-black"
     :class="{ 'bg-black': mixinChangeHeaderActiveHeader, 'bg-gradient-to-br': !mixinChangeHeaderActiveHeader }"
   >
     <nav class="flex py-2" :class="{ 'hidden': mixinChangeHeaderActiveHeader}">
@@ -27,7 +27,7 @@
         <IconWhatsapp class="text-xl text-gray-100" />
       </div>
     </nav>
-  </header>
+  </nav>
 </template>
 
 <script lang="ts">

@@ -1,5 +1,5 @@
 <template>
-  <header
+  <nav
     class="fixed z-40 flex items-center justify-center w-full h-10 bg-gradient-to-b from-black to-transparent"
     :class="{ 'bg-black': mixinChangeHeaderActiveHeader, 'bg-gradient-to-br': !mixinChangeHeaderActiveHeader }"
   >
@@ -14,7 +14,7 @@
       <a href="#" target="_blank" class="px-3"><IconWhatsapp class="text-xl text-gray-100" /></a>
     </div>
     <TheMobileNav v-if="isMenuOpen" @close="isMenuOpen = false" />
-  </header>
+  </nav>
 </template>
 
 <script lang="ts">
